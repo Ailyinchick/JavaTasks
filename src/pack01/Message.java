@@ -5,5 +5,15 @@ public enum Message {
 	ERROR,
 	EXCEPTION,
 	NOTOFICATION,
-	DEFAULT
+	DEFAULT;
+	
+	private static int pointer = 0;
+	
+	public static String getNext() {
+		if (pointer >= Message.values().length) {
+			pointer = 0;
+		}
+		return Message.values()[pointer].name();
+	}
+	
 }
