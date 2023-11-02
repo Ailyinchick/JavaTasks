@@ -13,7 +13,7 @@ public enum Message {
 		if (pointer >= Message.values().length) {
 			pointer = 0;
 		}
-		return Message.values()[pointer].name();
+		return Message.values()[pointer++].name();
 	}
 	
 }
