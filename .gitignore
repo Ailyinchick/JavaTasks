@@ -1,5 +1,10 @@
 bin/
+config
+description
 .classpath
+head
+hooks/
+info/
 .project
 <<<<<<< HEAD
 README.md
