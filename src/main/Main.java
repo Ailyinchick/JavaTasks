@@ -2,7 +2,7 @@ package main;
 
 import java.util.Random;
 
-import Enteties.*;
+import Entities.*;
 import Enums.Names;
 
 public class Main {

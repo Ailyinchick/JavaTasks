@@ -1,4 +1,4 @@
-package Enteties;
+package Entities;
 
 public class Entity extends ComparableEntity<Entity> {
 	

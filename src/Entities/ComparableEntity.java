@@ -1,4 +1,4 @@
-package Enteties;
+package Entities;
 
 import Interfaces.MyComparable;
 

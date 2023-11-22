@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Enteties.ComparableEntity;
+import Entities.ComparableEntity;
 
 public interface InsertionSort<T extends ComparableEntity<T>> extends Sortable<T> {
 	
