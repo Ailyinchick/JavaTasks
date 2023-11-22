@@ -14,11 +14,16 @@
 <p></p>
   <ul>
     <li>
-      I've started to learn a sorting topic and created a <a href = "/src/pack01/Sorter.java">Sorter</a> 
-      class for this purpose. Basic int[] insertionSort.
+      I've completed first task - implementation of InsertionSort. I have implemented algorithm in 
+       <a href = "/src/Interfaces/InsertionSort.java">InsertionSort</a> interface. 
+      Also you can find <b>MyComparable</b> interface and <b>ComparableEntity</b> abstract class with implementation in 
+      <a href = "/src/Entities/Entity.java">Entity</a> class.     
     </li>
     <li>
-      So far I've completed just basic task with <a href = "/src/pack01/Message.java">Message</a> enum
-      just to create basic structure of application and repository.
+      I've completed base structure of packages for this project:
+       <a href = "/src/Entities">Entities</a>,
+       <a href = "/src/Interfaces">Interfaces</a>,
+       <a href = "/src/Enums">Enums</a> and
+       <a href = "/src/Main">main</a> for <a href = "/src/main/Main.java">Main.java</a> with psvm to run.
     </li>
   </ul>
