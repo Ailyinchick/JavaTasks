@@ -14,6 +14,10 @@
 <p></p>
   <ul>
     <li>
+      I've started to learn a sorting topic and created a <a href = "/src/pack01/Sorter.java">Sorter</a> 
+      class for this purpose. Basic int[] insertionSort.
+    </li>
+    <li>
       So far I've completed just basic task with <a href = "/src/pack01/Message.java">Message</a> enum
       just to create basic structure of application and repository.
     </li>
