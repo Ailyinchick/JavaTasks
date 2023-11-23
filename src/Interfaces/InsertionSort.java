@@ -4,12 +4,6 @@ import Entities.ComparableEntity;
 
 public interface InsertionSort<T extends ComparableEntity<T>> extends Sortable<T> {
 	
-	
-	@Override
-	default void sort(T[] arr) {
-		insertionSortAsc(arr);
-	}
-	
 	// Ascending insertion sort
 	public default void insertionSortAsc(T[] arr) {
 		if (arr.length < 2) {

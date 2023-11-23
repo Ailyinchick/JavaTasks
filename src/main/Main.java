@@ -17,7 +17,7 @@ public class Main {
 		}
 
 		printAsList(arr);
-		sorter.sort(arr);
+		sorter.selectionSortAsc(arr);
 		System.out.println("*\nAfter sorting:\n*");
 		printAsList(arr);
 	}
