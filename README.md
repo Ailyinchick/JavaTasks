@@ -13,6 +13,9 @@
   I have one <a href = "/src/main/Main.java">Main</a> class to run my tasks. 
 <p></p>
   <ul>
+    <li> 
+      <a href = "/src/Interfaces/SelectionSort.java">SelectionSort</a> implementation.
+    </li>
     <li>
       I've completed first task - implementation of InsertionSort. I have implemented algorithm in 
        <a href = "/src/Interfaces/InsertionSort.java">InsertionSort</a> interface. 
