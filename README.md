@@ -13,28 +13,28 @@
   I have one <a href = "/src/main/Main.java">Main</a> class to run my tasks. 
 <p></p>
   <ul>
-    <li> 
-      Completed task 2.3.7 and implemented <a href = "/src/Interfaces/BinarySearch.java">Binary Search</a> interface.
+    <li>
+      Now with <b>Maven</b> and <a href = "/src/test/java">JUnit tests</a>.
     </li>
     <li> 
-      <a href = "/src/Interfaces/MergeSort.java">MergeSort</a> implementation.
+      Completed task 2.3.7 and implemented <a href = "/src/main/java/entities/BinarySearch.java">Binary Search</a> class.
     </li>
     <li> 
-      <a href = "/src/Interfaces/SelectionSort.java">SelectionSort</a> implementation.
+      <a href = "/src/main/java/entities/MergeSort.java">MergeSort</a> implementation.
+    </li>
+    <li> 
+      <a href = "/src/main/java/entities/SelectionSort.java">SelectionSort</a> implementation.
     </li>
     <li>
       I've completed first task - implementation of InsertionSort. I have implemented algorithm in 
-       <a href = "/src/Interfaces/InsertionSort.java">InsertionSort</a> interface. 
+       <a href = "/src/main/java/entities/InsertionSort.java">InsertionSort</a> class. 
       Also you can find <b>MyComparable</b> interface and <b>ComparableEntity</b> abstract class with implementation in 
       <a href = "/src/Entities/Entity.java">Entity</a> class.     
     </li>
     <li>
-      I've completed base structure of packages for this project:
-       <a href = "/src/Entities">Entities</a>,
-       <a href = "/src/Interfaces">Interfaces</a>,
-       <a href = "/src/Enums">Enums</a> and
-       <a href = "/src/Main">main</a> for <a href = "/src/main/Main.java">Main.java</a> with psvm to run.
+      I've completed (and refactored) base structure of packages for this project:
+       <a href = "/src/main/java/entities">entities</a>,
+       <a href = "/src/main/java/interfaces">interfaces</a> and 
+       <a href = "/src/main/java/main">main</a> for <a href = "/src/main/java/main/Main.java">Main.java</a> with psvm to run.
     </li>
   </ul>
-# JavaTasks
-Repo for Java tasks, review, algorithms and etc.
