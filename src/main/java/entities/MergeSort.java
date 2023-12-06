@@ -9,11 +9,17 @@ public class MergeSort<T extends MyComparable<T>> extends SortStrategy<T> {
 
     @Override
     public void sortAsc(List<T> list) {
+        if (list == null) {
+            return;
+        }
         splitAndMergeAsc(list, 0, list.size() - 1);
     }
 
     @Override
     public void sortDesc(List<T> list) {
+        if (list == null) {
+            return;
+        }
         splitAndMergeDesc(list, 0, list.size() - 1);
     }
 

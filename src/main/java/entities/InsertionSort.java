@@ -8,7 +8,7 @@ public class InsertionSort<T extends MyComparable<T>> extends SortStrategy<T> {
 
     @Override
     public void sortAsc(List<T> list) {
-        if (list.size() < 2) {
+        if (list == null || list.size() < 2) {
             return;
         }
         for (int i = 1; i < list.size(); i += 1) {
@@ -24,7 +24,7 @@ public class InsertionSort<T extends MyComparable<T>> extends SortStrategy<T> {
 
     @Override
     public void sortDesc(List<T> list) {
-        if (list.size() < 2) {
+        if (list == null || list.size() < 2) {
             return;
         }
         for (int i = 1; i < list.size(); i += 1) {

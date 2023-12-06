@@ -4,15 +4,15 @@ import org.junit.Test;
 
 import main.Template;
 
-public class MergeSortTest {
+public class SelectionSortTest {
 
     @Test
     public void sortAsc1000() {
-        Template.testAsc(1000, new MergeSort<Entity>());
+        Template.testAsc(1000, new SelectionSort<Entity>());
     }
 
     @Test
     public void sortDesc1000() {
-        Template.testDesc(1000, new MergeSort<Entity>());
+        Template.testDesc(1000, new SelectionSort<Entity>());
     }
 }
