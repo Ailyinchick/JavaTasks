@@ -9,14 +9,25 @@ import entities.*;
 public class Main {
 
     public static void main(String[] args) {
-        SortStrategy<Entity> strategy = new InsertionSort<>();
-        Sorter<Entity> sorter = new Sorter<>(strategy);
-        List<Entity> entities = generateListOfEntities(10);
-        
-        printAsList(entities);
-        sorter.getSortStrategy().sortAsc(entities);
-        System.out.println("After sorting: ");
-        printAsList(entities);
+        List<Entity> list = new ArrayList<>(10);
+
+        list.add(new Entity(Data.getNextName(), 50));
+        list.add(new Entity(Data.getNextName(), 48));
+        list.add(new Entity(Data.getNextName(), 45));
+        list.add(new Entity(Data.getNextName(), 43));
+        list.add(new Entity(Data.getNextName(), 40));
+        list.add(new Entity(Data.getNextName(), 35));
+        list.add(new Entity(Data.getNextName(), 25));
+        list.add(new Entity(Data.getNextName(), 22));
+        list.add(new Entity(Data.getNextName(), 18));
+        list.add(new Entity(Data.getNextName(), 15));
+
+        Sorter<Entity> sorter = new Sorter<>(new MergeSort<Entity>());
+        sorter.getSortStrategy().sortAsc(list);
+        Searcher<Entity> searcher = new Searcher<>(new BinarySearch<Entity>());
+        int index = searcher.getSearchStrategy().
+                find(new Entity(Data.getNextName(), 40), list, 0, 10);
+        System.out.println(index);
 
     }
     

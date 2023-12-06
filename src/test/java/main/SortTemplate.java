@@ -11,7 +11,7 @@ import entities.Entity;
 import entities.SortStrategy;
 import entities.Sorter;
 
-public class Template {
+public class SortTemplate {
 
     private static List<Entity> generateListOfEntities(int size) {
         if (size <= 0) {
@@ -25,24 +25,28 @@ public class Template {
         return list;
     }
 
-    public static void testAsc(int size, SortStrategy<Entity> strategy) {
+    public static void testAsc(int size, final SortStrategy<Entity> strategy) {
         Sorter<Entity> sorter = new Sorter<Entity>(strategy);
         List<Entity> list = generateListOfEntities(1000);
 
         sorter.getSortStrategy().sortAsc(list);
-        for (int i = 0; i < list.size() - 1; i += 1) {
-            Assert.assertTrue(list.get(i).compareTo(list.get(i + 1)) >= 0);
+        boolean correct = true;
+        for (int i = 0; i < list.size() - 1 && correct; i += 1) {
+            correct = list.get(i).compareTo(list.get(i + 1)) >= 0;
         }
+        Assert.assertTrue(correct);
     }
 
-    public static void testDesc(int size, SortStrategy<Entity> strategy) {
+    public static void testDesc(int size, final SortStrategy<Entity> strategy) {
         Sorter<Entity> sorter = new Sorter<Entity>(strategy);
         List<Entity> list = generateListOfEntities(1000);
 
         sorter.getSortStrategy().sortDesc(list);
-        for (int i = 0; i < list.size() - 1; i += 1) {
-            Assert.assertTrue(list.get(i).compareTo(list.get(i + 1)) <= 0);
+        boolean correct = true;
+        for (int i = 0; i < list.size() - 1 && correct; i += 1) {
+            correct = list.get(i).compareTo(list.get(i + 1)) <= 0;
         }
+        Assert.assertTrue(correct);
     }
 
 }
