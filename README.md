@@ -14,7 +14,8 @@
 <p></p>
   <ul>
     <li>
-      Implemented <a href = "/src/main/java/entities/FindMaximumSubArray.java">FindMaximumSubArray</a> class and <a href = "/src/test/java/entities/FindMaximumSubArrayTest.java">FindMaximumSubArrayTest</a>.
+      Implemented <a href = "/src/main/java/entities/FindMaximumSubArray.java">FindMaximumSubArray</a> class and 
+      <a href = "/src/test/java/entities/FindMaximumSubArrayTest.java">FindMaximumSubArrayTest</a>.
     </li>
     <li>
       Now with <b>Maven</b> and <a href = "/src/test/java">JUnit tests</a>.
