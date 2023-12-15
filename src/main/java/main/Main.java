@@ -9,28 +9,19 @@ import entities.*;
 public class Main {
 
     public static void main(String[] args) {
-        List<Entity> list = new ArrayList<>(10);
-
-        list.add(new Entity(Data.getNextName(), 50));
-        list.add(new Entity(Data.getNextName(), 48));
-        list.add(new Entity(Data.getNextName(), 45));
-        list.add(new Entity(Data.getNextName(), 43));
-        list.add(new Entity(Data.getNextName(), 40));
-        list.add(new Entity(Data.getNextName(), 35));
-        list.add(new Entity(Data.getNextName(), 25));
-        list.add(new Entity(Data.getNextName(), 22));
-        list.add(new Entity(Data.getNextName(), 18));
-        list.add(new Entity(Data.getNextName(), 15));
-
-        Sorter<Entity> sorter = new Sorter<>(new MergeSort<Entity>());
-        sorter.getSortStrategy().sortAsc(list);
-        Searcher<Entity> searcher = new Searcher<>(new BinarySearch<Entity>());
-        int index = searcher.getSearchStrategy().
-                find(new Entity(Data.getNextName(), 40), list, 0, 10);
-        System.out.println(index);
-
+        
+        int[] failed1 = {3, -1, -8, 3, -5, 5, -4, -6, 9, -9};
+        int[] failed2 = {-2, -5, -1, -5, -10, -10, 9, -7, -2, -3};
+        int[] failed3 = {2, -7, -6, -8, -6, -7, 9, -10, 8, -1}; 
+        
+        FindMaximumSubArray finder = new FindMaximumSubArray(10);
+        
+        finder.setList(failed3);
+        
+        printAsLine(finder.getList());
+        printAsLine(finder.findMaxSubArrayBruteForce());
+        printAsLine(finder.findMaxSubArrayDivideThem());
     }
-    
 
     public static <T> void printAsLine(List<T> list) {
         for (T t : list) {

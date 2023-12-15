@@ -17,4 +17,5 @@ public class Searcher<T extends MyComparable<T>> {
     public void setStrategy(SearchStrategy<T> strategy) {
         this.searchStrategy = strategy;
     }
+    
 }
