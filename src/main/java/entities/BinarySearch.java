@@ -12,10 +12,10 @@ public class BinarySearch<T extends MyComparable<T>> extends SearchStrategy<T> {
             return -1;
         }
         int index = from + (to - from) / 2;
-        if (list.get(index).compareTo(t) == 0) {
+        if (t.compareTo(list.get(index)) == 0) {
             return index;
         }
-        if (list.get(index).compareTo(t) == -1) {
+        if (t.compareTo(list.get(index)) == 1) {
             to = index - 1;
         } else {
             from = index + 1;
