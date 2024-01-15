@@ -7,7 +7,7 @@ public class MatrixMultiply {
      * matrix names instead of arr1, arr2 (etc.)
      */
 
-    public int[][] matrixMultipleyBruteForce(final int[][] A, final int[][] B) {
+    public int[][] multiplyBruteForce(final int[][] A, final int[][] B) {
 
         if (!isValidForMultiply(A, B)) {
             System.out.println("Provided matrixed are not valid for multiplying");
@@ -32,13 +32,13 @@ public class MatrixMultiply {
         return summ;
     }
 
-    public int[][] devideThem(final int[][] A, final int[][] B) {
+    public int[][] multiplyRecursive(final int[][] A, final int[][] B) {
         if (!isValidForMultiply(A, B)) {
             System.out.println("Provided matrixed are not valid for multiplying");
             return new int[1][1];
         }
 
-        return matrixMultiplyDivide(A, B);
+        return multiplyMatrixRecursive(A, B);
     }
 
     private boolean isValidForMultiply(final int[][] A, final int[][] B) {
@@ -54,7 +54,7 @@ public class MatrixMultiply {
         return true;
     }
 
-    private int[][] matrixMultiplyDivide(int[][] A, int[][] B) {
+    private int[][] multiplyMatrixRecursive(int[][] A, int[][] B) {
         if (A.length == 0 || A[0].length == 0 || B.length == 0 || B[0].length == 0) {
             return new int[0][0];
         }
@@ -92,20 +92,20 @@ public class MatrixMultiply {
             B21 = getArrWithNewBounds(B, 0, midYB, midXB, B.length);
             B22 = getArrWithNewBounds(B, midXB, midYB, B[0].length, B.length);
 
-            X1 = matrixMultiplyDivide(A11, B11);
-            X2 = matrixMultiplyDivide(A12, B21);
+            X1 = multiplyMatrixRecursive(A11, B11);
+            X2 = multiplyMatrixRecursive(A12, B21);
             C11 = summOfMatrix(X1, X2);
 
-            X1 = matrixMultiplyDivide(A11, B12);
-            X2 = matrixMultiplyDivide(A12, B22);
+            X1 = multiplyMatrixRecursive(A11, B12);
+            X2 = multiplyMatrixRecursive(A12, B22);
             C12 = summOfMatrix(X1, X2);
 
-            X1 = matrixMultiplyDivide(A21, B11);
-            X2 = matrixMultiplyDivide(A22, B21);
+            X1 = multiplyMatrixRecursive(A21, B11);
+            X2 = multiplyMatrixRecursive(A22, B21);
             C21 = summOfMatrix(X1, X2);
 
-            X1 = matrixMultiplyDivide(A21, B12);
-            X2 = matrixMultiplyDivide(A22, B22);
+            X1 = multiplyMatrixRecursive(A21, B12);
+            X2 = multiplyMatrixRecursive(A22, B22);
             C22 = summOfMatrix(X1, X2);
 
             int[][] ans = new int[A.length][B[0].length];

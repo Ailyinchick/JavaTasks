@@ -35,9 +35,9 @@ public class Main {
 
         MatrixMultiply multiplier = new MatrixMultiply();
 
-        printMatrix(multiplier.matrixMultipleyBruteForce(B2, A2));
+        printMatrix(multiplier.multiplyBruteForce(B2, A2));
         System.out.println("================");
-        printMatrix(multiplier.devideThem(B2, A2));
+        printMatrix(multiplier.multiplyRecursive(B2, A2));
 
 
     }
