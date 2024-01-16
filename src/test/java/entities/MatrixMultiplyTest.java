@@ -13,7 +13,10 @@ public class MatrixMultiplyTest {
 
         int[][] brute = multiplier.multiplyBruteForce(A, B);
         int[][] recursive = multiplier.multiplyRecursive(A, B);
+        int[][] strassen = multiplier.multiplyStrassen(A, B);
+
         Assert.assertTrue(isMatrixesAreEqual(brute, recursive));
+        Assert.assertTrue(isMatrixesAreEqual(brute, strassen));
     }
 
     @Test
@@ -24,7 +27,10 @@ public class MatrixMultiplyTest {
 
         int[][] brute = multiplier.multiplyBruteForce(B, A);
         int[][] recursive = multiplier.multiplyRecursive(B, A);
+        int[][] strassen = multiplier.multiplyStrassen(B, A);
+
         Assert.assertTrue(isMatrixesAreEqual(brute, recursive));
+        Assert.assertTrue(isMatrixesAreEqual(brute, strassen));
     }
 
     @Test
@@ -35,8 +41,10 @@ public class MatrixMultiplyTest {
 
         int[][] brute = multiplier.multiplyBruteForce(A, B);
         int[][] recursive = multiplier.multiplyRecursive(A, B);
+        int[][] strassen = multiplier.multiplyStrassen(A, B);
 
         Assert.assertTrue(isMatrixesAreEqual(brute, recursive));
+        Assert.assertTrue(isMatrixesAreEqual(brute, strassen));
     }
 
     @Test
@@ -47,8 +55,10 @@ public class MatrixMultiplyTest {
 
         int[][] brute = multiplier.multiplyBruteForce(A, B);
         int[][] recursive = multiplier.multiplyRecursive(A, B);
+        int[][] strassen = multiplier.multiplyStrassen(A, B);
 
         Assert.assertTrue(isMatrixesAreEqual(brute, recursive));
+        Assert.assertTrue(isMatrixesAreEqual(brute, strassen));
     }
 
     @Test
@@ -59,11 +69,12 @@ public class MatrixMultiplyTest {
 
         int[][] brute = multiplier.multiplyBruteForce(B, A);
         int[][] recursive = multiplier.multiplyRecursive(B, A);
+        int[][] strassen = multiplier.multiplyStrassen(B, A);
 
         Assert.assertTrue(isMatrixesAreEqual(brute, recursive));
+        Assert.assertTrue(isMatrixesAreEqual(brute, strassen));
     }
 
-    
     private boolean isMatrixesAreEqual(final int[][] A, final int[][] B) {
         if (A == null || B == null) {
             return false;

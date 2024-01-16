@@ -34,10 +34,12 @@ public class Main {
                        { 5, 6 } };
 
         MatrixMultiply multiplier = new MatrixMultiply();
-
+        
         printMatrix(multiplier.multiplyBruteForce(B2, A2));
         System.out.println("================");
         printMatrix(multiplier.multiplyRecursive(B2, A2));
+        System.out.println("================");
+        printMatrix(multiplier.multiplyStrassen(B2, A2));
 
 
     }
