@@ -14,6 +14,10 @@
 <p></p>
   <ul>
     <li>
+      Implemented <a href = "/src/main/java/entities/MatrixMultiply.java">MatrixMultiply</a> class and 
+      <a href = "/src/test/java/entities/MatrixMultiplyTest.java">MatrixMultiplyTest</a>. <b>Recursive</b> and <b>Strassen</b> algorithms are implemented.
+    </li>
+    <li>
       Implemented <a href = "/src/main/java/entities/FindMaximumSubArray.java">FindMaximumSubArray</a> class and 
       <a href = "/src/test/java/entities/FindMaximumSubArrayTest.java">FindMaximumSubArrayTest</a>.
     </li>
