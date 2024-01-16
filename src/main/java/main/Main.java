@@ -9,18 +9,50 @@ import entities.*;
 public class Main {
 
     public static void main(String[] args) {
+
+        int[][] A = { { 1, 2, 3, 4 } };
+        int[][] B = { { 1 }, { 2 }, { 3 }, { 4 } };
         
-        int[] failed1 = {3, -1, -8, 3, -5, 5, -4, -6, 9, -9};
-        int[] failed2 = {-2, -5, -1, -5, -10, -10, 9, -7, -2, -3};
-        int[] failed3 = {2, -7, -6, -8, -6, -7, 9, -10, 8, -1}; 
+
+        int[][] A1 = {   { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 } };
+
+        int[][] B1 = {   { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 }, 
+                        { 1, 2, 3, 4 } };
         
-        FindMaximumSubArray finder = new FindMaximumSubArray(10);
+
+        int[][] A2 = { { 1, 2, 3, 4, 5 },
+                       { 5, 4, 3, 2, 1 } };
+        int[][] B2 = { { 1, 2 }, 
+                       { 2, 3 }, 
+                       { 3, 4 }, 
+                       { 4, 5 }, 
+                       { 5, 6 } };
+
+        MatrixMultiply multiplier = new MatrixMultiply();
         
-        finder.setList(failed3);
-        
-        printAsLine(finder.getList());
-        printAsLine(finder.findMaxSubArrayBruteForce());
-        printAsLine(finder.findMaxSubArrayDivideThem());
+        printMatrix(multiplier.multiplyBruteForce(B2, A2));
+        System.out.println("================");
+        printMatrix(multiplier.multiplyRecursive(B2, A2));
+        System.out.println("================");
+        printMatrix(multiplier.multiplyStrassen(B2, A2));
+
+
+    }
+
+
+    public static void printMatrix(int[][] M) {
+        for (int i = 0; i < M.length; i += 1) {
+            System.out.print("{ ");
+            for (int j = 0; j < M[0].length; j += 1) {
+                System.out.print(M[i][j] + " ");
+            }
+            System.out.println("}");
+        }
     }
 
     public static <T> void printAsLine(List<T> list) {
